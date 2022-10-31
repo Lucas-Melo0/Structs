@@ -20,5 +20,14 @@ func main() {
 			email:   "jim@gmail.com",
 			zipCode: 94000,
 		}}
-	fmt.Printf("%+v", jim)
+	jim.updateFirstName("JonBonJones")
+	jim.print()
+}
+
+func (p person) print() {
+	fmt.Printf("%+v", p)
+}
+
+func (p person) updateFirstName(newFirstName string) {
+	p.firstName = newFirstName
 }
